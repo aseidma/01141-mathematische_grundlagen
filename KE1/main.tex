@@ -1,0 +1,226 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\setlength{\parindent}{0pt}
+\title{Mathematische Grundlagen KE1 Einsendeaufgaben}
+\author{Alexander Seidmann}
+\begin{document}
+\maketitle{}
+\setcounter{section}{1}
+\subsection{}
+\subsubsection{}
+Behauptung: $A\Rightarrow (B\Rightarrow C)$ und $(A\land B)\Rightarrow C$ sind logisch äquivalent.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        A & B & C & $B\Rightarrow C$ & $(A\Rightarrow (B\Rightarrow C))$ \\
+        \hline
+        w & w & w & w & w \\
+        w & w & f & f & f \\
+        w & f & w & w & w \\
+        w & f & f & w & w \\
+        f & w & w & w & w \\
+        f & w & f & f & w \\
+        f & f & w & w & w \\
+        f & f & f & w & w \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        A & B & C & $A\land B$ & $(A\land B)\Rightarrow C$ \\
+        \hline
+        w & w & w & w & w \\
+        w & w & f & w & f \\
+        w & f & w & f & w \\
+        w & f & f & f & w \\
+        f & w & w & f & w \\
+        f & w & f & f & w \\
+        f & f & w & f & w \\
+        f & f & f & f & w \\
+        \hline
+    \end{tabular}
+\end{center}
+
+$A\Rightarrow (B\Rightarrow C)$ und $(A\land B)\Rightarrow C$ sind logisch äquivalent.
+$\square{}$
+
+\subsubsection{}
+Behauptung: $(A\Rightarrow B)\Rightarrow C$ und $((\lnot{A})\Rightarrow C)\land (B\Rightarrow C)$ sind logisch äquivalent.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        A & B & C & $(\lnot A)\Rightarrow C$ & $B\Rightarrow C$ & $((\lnot A)\Rightarrow C)\land(B\Rightarrow C)$ \\
+        \hline
+        w & w & w & w & w & w \\
+        w & w & f & w & f & f \\
+        w & f & w & w & w & w \\
+        w & f & f & w & w & w \\
+        f & w & w & w & w & w \\
+        f & w & f & f & f & f \\
+        f & f & w & w & w & w \\
+        f & f & f & f & w & f \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        A & B & C & $A\Rightarrow B$ & $(A\Rightarrow B)\Rightarrow C$ \\
+        \hline
+        w & w & w & w & w \\
+        w & w & f & w & f \\
+        w & f & w & f & w \\
+        w & f & f & f & w \\
+        f & w & w & w & w \\
+        f & w & f & w & f \\
+        f & f & w & w & w \\
+        f & f & f & w & f \\
+        \hline
+    \end{tabular}
+\end{center}
+$(A\Rightarrow B)\Rightarrow C$ und $((\lnot{A})\Rightarrow C)\land (B\Rightarrow C)$ sind logisch äquivalent.
+$\square{}$
+
+\subsection{}
+\subsubsection{}
+Behauptung: Es gilt $n^2>n+1$ für alle $n\geq 2$.
+
+Induktionsanfang:
+
+$$n=2$$
+$$2^2>2+1$$
+$$4>3$$
+Es gilt der Induktionsanfang.
+
+Induktionsbehauptung:
+$$(n+1)^2>(n+1)+1$$
+
+Beweis:
+$$(n+1)^2>n+1+(((n+1)+1)-(n+1))$$
+$$(n+1)^2>n+1+1$$
+$$(n+1)^2>(n+1)+1$$
+
+Mit dem Prinzip der Vollständigen Induktion folgt für alle $n\in \mathbf{N}$ mit $n \geq 2$ gilt $n^2>n+1$.
+$\square$
+
+\subsubsection{}
+Behauptung: Es gilt $n^2\geq2n+3$ für alle $n\geq 3$.
+
+Induktionsanfang:
+$$n=3$$
+$$3^2\geq 2*3+3$$
+$$9\geq 9$$
+Es gilt der Induktionsanfang.
+
+Induktionsschritt:
+$$(n+1)^2\geq 2(n+1)+3$$
+
+Beweis:
+$$(n+1)^2\geq 2n+3+((2(n+1)+3)-(2n+3))$$
+$$(n+1)^2\geq 2n+3+2$$
+$$(n+1)^2\geq 2n+2+3$$
+$$(n+1)^2\geq 2(n+1)+3$$
+
+Mit dem Prinzip der Vollständigen Induktion folgt: für alle $n\in \mathbf{N}$ mit $n \geq 3$ gilt $n^2\geq2n+3$.
+$\square$
+
+\subsection{}
+\subsubsection{}
+
+$$
+X = \begin{pmatrix}
+    2 & 2 & 2 \\
+    -1 & -1 & -1 
+\end{pmatrix}
+$$
+
+\subsubsection{}
+$$
+AB = \begin{pmatrix}
+    -1 & -8 & -10 \\
+    1 & -2 & -5 \\ 
+    9 & 22 & 15 
+\end{pmatrix}
+$$
+$$
+BA = \begin{pmatrix}
+    15 & -21 \\
+    10 & -3 
+\end{pmatrix}
+$$
+
+\subsection{}
+\subsubsection{}
+$$f: N\rightarrow N$$
+$$
+f(x)=
+\begin{cases}
+    1, \text{wenn } x \text{ ungerade} \\
+    \frac{x}{2}, \text{wenn } x \text{ gerade} 
+\end{cases}
+$$
+
+(a) ist erfüllt, da $\frac{x}{2}$ alle Zahlen $\mathbf{N}$ abbildet.
+
+(b) ist erfüllt, da die Urbilder von $f(1)$ alle ungeraden Zahlen in $\mathbf{N}$ sind.
+
+\subsubsection{}
+$$g: N\rightarrow N$$
+$$g(x)=2x$$
+
+(a) ist erfüllt, da es für jedes Element $g(x)$ genau ein Urbild $x\in \mathbf{N}$ gibt. 
+
+(b) ist erfüllt, da $Bild(g)$ alle geraden Zahlen in $\mathbf{N}$ sind, und dadurch
+$\mathbf{N}\not Bild(g)$ alle ungeraden Zahlen sind, also eine unendlich große Menge.
+
+\subsection{}
+Sei $A\in M_{mn}(\mathbf{K})$ eine Matrix, sodass $XA=0\in M_{mn}(\mathbf{K})$ für alle Matrizen $X\in M_{mm}(K)$ gilt.
+Beweisen Sie, dass A die Nullmatrix in $M_{mn}(K)$ ist. \\
+Annahme:
+A ist die Nullmatrix in $M_{mn}(K)$.
+Sei $m=2$ und $n=3$ und X somit eine Matrix $
+\begin{pmatrix}
+    a & b \\
+    c & d
+\end{pmatrix}
+$ und A eine Matrix $
+\begin{pmatrix}
+    e & f & g \\
+    h & i & j
+\end{pmatrix}
+$. 
+
+\vspace{10mm}
+
+Dann ist $XA=
+\begin{pmatrix}
+    e & f & g \\
+    h & i & j
+\end{pmatrix}
+=
+\begin{pmatrix}
+    $ae+bh$ & $af+bi$ & $ag+bj$ \\
+    $ce+dh$ & $cf+di$ & $cg+dj$
+\end{pmatrix}
+$. 
+
+\vspace{10mm}
+
+Da XA die Nullmatrix in $M_{mn}(K)$ ist, muss 
+$$
+\begin{pmatrix}
+    $ae+bh=0$ & $af+bi=0$ & $ag+bj=0$ \\
+    $ce+dh=0$ & $cf+di=0$ & $cg+dj=0$
+\end{pmatrix}
+$$ gelten. \\
+Sei nun $XA = (z_{ij})$, so muss sowohl der linke als auch der rechte Summand in Berechnung von $z_{ij}$ immer 0 sein, oder die Summanden invers zueinander sein. \\
+Da es keine Zahlen $m, n\in K\setminus 0$ gibt, sodass für jede Zahlenkombination $x, y\in K\setminus 0$ $mx + ny = 0$ ist, muss A die Nullmatrix sein. $\square$
+
+
+\end{document}
